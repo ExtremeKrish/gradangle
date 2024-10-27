@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- SEO Meta Tags -->
+    <!-- <meta name="description" content="Discover the secrets of dark psychology, manipulation, and body language reading with 'The Dark Intrigue'. Learn the techniques and strategies used to influence and understand people.">
+    <meta name="keywords" content="dark psychology,the dark intrigue, extreme_krish, alpha_tenet, manipulation, body language, ebook, psychology, influence, mind control, reading people, understanding behavior">
+    <meta name="author" content="Extreme_Krish"> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+
+    <title>Edtech Startup</title>
+    <style>
+        /* Define the base colors for dark and light modes */
+        
+         :root {
+            /* Light Mode Colors */
+            --color-background-light: #ffffff;
+            --color-foreground-light: #000;
+            --color-surface-light: #f5f5f5;
+            --color-primary-light: #333333;
+            --color-secondary-light: #555555;
+            --color-accent-light: #0066cc;
+            --color-border-light: #e0e0e0;
+            --color-shadow-light: rgba(0, 0, 0, 0.1);
+            /* Dark Mode Colors */
+            --color-background-dark: #121212;
+            --color-foreground-dark: #fff;
+            --color-surface-dark: #1e1e1e;
+            --color-primary-dark: #ffffff;
+            --color-secondary-dark: #cccccc;
+            --color-accent-dark: #3399ff;
+            --color-border-dark: #333333;
+            --color-shadow-dark: rgba(0, 0, 0, 0.5);
+            /* Font Sizes and Spacing */
+            --font-size-base: 16px;
+            --font-size-large: 18px;
+            --font-size-small: 14px;
+            --spacing-small: 8px;
+            --spacing-medium: 16px;
+            --spacing-large: 24px;
+        }
+        /* Light mode styling */
+        
+        .light-theme {
+            --color-background: var(--color-background-light);
+            --color-foreground: var(--color-foreground-light);
+            --color-surface: var(--color-surface-light);
+            --color-primary: var(--color-primary-light);
+            --color-secondary: var(--color-secondary-light);
+            --color-accent: var(--color-accent-light);
+            --color-border: var(--color-border-light);
+            --color-shadow: var(--color-shadow-light);
+        }
+        /* Dark mode styling */
+        
+        .dark-theme {
+            --color-background: var(--color-background-dark);
+            --color-foreground: var(--color-foreground-dark);
+            --color-surface: var(--color-surface-dark);
+            --color-primary: var(--color-primary-dark);
+            --color-secondary: var(--color-secondary-dark);
+            --color-accent: var(--color-accent-dark);
+            --color-border: var(--color-border-dark);
+            --color-shadow: var(--color-shadow-dark);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            /* Apply transition to all elements */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        @font-face {
+            font-family: 'Virgil';
+            src: url('virgil.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: "Mabry Pro";
+            src: url(https://assets.gumroad.com/packs/static/19db990205089207b039.woff2);
+        }
+        
+        @font-face {
+            font-family: "Mabry Pro";
+            src: url(https://assets.gumroad.com/packs/static/b155e959ca3c72194673.woff2);
+            font-style: italic;
+        }
+        
+        @font-face {
+            font-family: "Mabry Pro";
+            src: url(https://assets.gumroad.com/packs/static/f301b7100da17db3c2c0.woff2);
+            font-weight: 700;
+        }
+        
+        @font-face {
+            font-family: "Mabry Pro";
+            src: url(https://assets.gumroad.com/packs/static/aaec7850d09c0889a8b5.woff2);
+            font-weight: 700;
+            font-style: italic;
+        }
+        
+        html {
+            height: 100%;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Mabry Pro;
+            background-color: var(--color-background);
+            height: 100%;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            user-select: none;
+            /* Standard */
+            -webkit-user-select: none;
+            /* Safari */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+        }
+        
+        nav {
+            padding: 16px;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            background-color: var(--color-background);
+            gap: 16px;
+            font-size: 20px;
+            z-index: 999;
+            user-select: none;
+            color: var(--color-foreground);
+        }
+        
+        nav span {
+            flex: 1;
+            font-weight: 500;
+        }
+        
+        svg.line {
+            height: 24px;
+            width: 24px;
+            fill: none;
+            stroke: var(--color-foreground);
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 1.25;
+            cursor: pointer;
+        }
+        
+        nav svg.fill {
+            height: 24px;
+            width: 24px;
+            cursor: pointer;
+            color: var(--color-foreground);
+        }
+        
+        nav svg rect {
+            fill: var(--color-foreground);
+        }
+        
+        main {
+            margin-top: 56px;
+            padding: 16px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .fa-solid {
+            margin-right: 4px
+        }
+        
+        .drawer-container {
+            position: relative;
+        }
+        
+        .drawer {
+            position: fixed;
+            top: 56px;
+            right: -262px;
+            width: 250px;
+            height: 100%;
+            background: var(--color-background);
+            border-left: 1px solid var(--color-border);
+            transition: right 0.3s;
+            z-index: 1;
+        }
+        
+        .drawer-inner {
+            padding: 0px;
+        }
+        
+        .drawer-inner ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .drawer-inner ul li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .drawer-inner ul span {
+            border-bottom: 1px solid var(--color-border);
+            color: var(--color-foreground);
+            display: flex;
+            padding: 8px;
+            justify-content: center;
+        }
+        
+        .drawer-inner li a {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            text-decoration: none;
+            color: var(--color-foreground);
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            transition: background-color 0.5s;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .overlay.active {
+            background-color: var(--color-shadow);
+            pointer-events: auto;
+        }
+        
+        .container {
+            display: flex;
+            width: 60vw;
+            flex-direction: column;
+            font-size: 30px;
+        }
+        
+        #search {
+            background-color: var(--color-background);
+            color: var(--color-foreground);
+            border: 1px solid var(--color-border);
+            padding: 12px;
+            width: 100%;
+            font-family: virgil;
+            outline: none;
+            font-size: 20px;
+        }
+        
+        h1 {
+            color: var(--color-foreground);
+        }
+        
+        #toggle {}
+        
+        div.icons {
+            display: flex;
+            padding: 12px;
+            border-bottom: var(--color-border);
+        }
+        /* For mobile devices (up to 768px) */
+        
+        @media (max-width: 768px) {
+            /* Styles for mobile */
+            .container {
+                width: 80vw;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark-theme">
+    <div class="drawer-container">
+        <div class="overlay" onclick="closeDrawer()"></div>
+        <div class="drawer">
+            <div class="drawer-inner">
+                <ul>
+                    <span>Menu</span>
+                    <li><a href="https://thedarkintrigue.com">Home</a></li>
+                    <li><a href="https://youtube.com/@alpha_tenet">Youtube</a></li>
+                    <li><a href="https://instagram.com/alpha_tenet">Instagram</a></li>
+                    <!-- <li><a href="#">Buy me a Coffee</a></li> -->
+                    <li><a href="/cdn-cgi/l/email-protection#83e8f1eaf0ebf5eaf0ebf4e2e8e2f1eee2bbb0c3e4eee2eaefade0ecee">Contact Us</a></li>
+                </ul>
+                <div class="icons">
+                    <svg id="toggle" class="line" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g><circle class='line' cx='12' cy='12' r='6'></circle><circle cx='12' cy='3' r='1'></circle><circle cx='12' cy='21' r='1'></circle><circle cx='21' cy='12' r='1'></circle><circle cx='3' cy='12' r='1'></circle><circle cx='5.5' cy='5.5' r='1'></circle><circle cx='18.5' cy='18.5' r='1'></circle><circle cx='18.5' cy='5.5' r='1'></circle><circle cx='5.5' cy='18.5' r='1'></circle></g></svg>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <span>Padhlo Baccho</span>
+        <svg class="line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g transform="translate(2.000000, 2.000000)">
+                    <circle cx="9.76659044" cy="9.76659044" r="8.9885584"></circle>
+                    <line x1="16.0183067" y1="16.4851259" x2="19.5423342" y2="20.0000001"></line>
+                </g>
+            </svg>
+        <!-- <svg class="line"
+					xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) translate(5.500000, 4.000000)"><line x1="6.7743" y1="15.7501" x2="6.7743" y2="0.7501"></line><path d="M12.7988,9.6998 C12.7988,9.6998 9.5378,15.7498 6.7758,15.7498 C4.0118,15.7498 0.7498,9.6998 0.7498,9.6998"></path></g></svg> 
+  -->
+        <svg onclick="toggleDrawer() " class="fill" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="5" width="20" height="1.5" fill="black" rx="0.75" ry="0.75" />
+                <rect x="2" y="11" width="20" height="1.5" fill="black" rx="0.75" ry="0.75" />
+                <rect x="2" y="17" width="20" height="1.5" fill="black" rx="0.75" ry="0.75" />
+            </svg>
+    </nav>
+    <main>
+        <div class="container">
+            <h1>Minimality</h1>
+            <input type="search" name="search" id="search" placeholder="Search here ...">
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/3701a9a57e.js" crossorigin="anonymous"></script>
+
+    <script>
+        function toggleDrawer() {
+            var drawer = document.querySelector('.drawer');
+            var overlay = document.querySelector('.overlay');
+
+            if (!overlay.classList.contains("active")) {
+                drawer.style.right = '0';
+                overlay.classList.add('active');
+            } else {
+                drawer.style.right = '-262px';
+                overlay.classList.remove('active');
+            }
+        }
+
+        function closeDrawer() {
+            var drawer = document.querySelector('.drawer');
+            var overlay = document.querySelector('.overlay');
+
+            drawer.style.right = '-262px';
+            overlay.classList.remove('active');
+        }
+
+        document.getElementById('toggle').addEventListener('click', function() {
+            document.body.classList.toggle('light-theme');
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+
+</body>
+
+</html>
