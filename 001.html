@@ -80,7 +80,7 @@
         
         @font-face {
             font-family: 'Virgil';
-            src: url('virgil.ttf') format('truetype');
+            src: url('pretty.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
@@ -127,6 +127,7 @@
             -moz-user-select: none;
             /* Firefox */
             -ms-user-select: none;
+            color: var(--color-foreground);
         }
         
         nav {
@@ -176,8 +177,8 @@
             padding: 16px;
             height: 100%;
             display: flex;
-            align-items: center;
-            justify-content: center;
+           flex-direction: column;
+           font-family: Virgil;
         }
         
         .fa-solid {
@@ -286,6 +287,71 @@
                 width: 80vw;
             }
         }
+        
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  font-family: Mabry Pro
+}
+
+.breadcrumb li {
+  margin-right: 8px;
+}
+
+.breadcrumb li::after {
+  content: ">";
+  margin-left: 8px;
+}
+
+.breadcrumb li:last-child::after {
+  content: ""; /* Remove arrow from the last item */
+  margin-left: 0;
+}
+
+.breadcrumb li.active {
+  font-weight: bold; /* Highlight current page */
+  pointer-events: none; /* Make it non-clickable */
+}
+.breadcrumb a{
+    color: var(--color-primary);
+    text-decoration: none;
+}
+        .formula {
+            font-size: 1.5em;
+            color: var(--color-foreground);
+            font-family: 'Virgil';
+            
+            /* Apply Virgil font */
+            margin: 15px 0;
+        }
+
+        /* Custom CSS for Mathematical Symbols */
+        .integral::before {
+            content: "∫";
+            font-size: 1.3em;
+            margin-right: 5px;
+        }
+
+        .power {
+            vertical-align: super;
+            font-size: 0.7em;
+        }
+
+        .fraction {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .fraction > .numerator {
+            display: block;
+            text-align: center;
+        }
+        .fraction > .denominator {
+            display: block;
+            text-align: center;
+            border-top: 1px solid #333;
+            margin-top: -3px;
+        }
     </style>
 </head>
 
@@ -297,22 +363,13 @@
                 <ul>
                     <span>Menu</span>
                     <li><a href="https://thedarkintrigue.com">Home</a></li>
-                    <li><a href="https://youtube.com/@alpha_tenet">JEE</a></li>
-                    <li><a href="https://youtube.com/@alpha_tenet">NEET</a></li>
-
-                    <li><a href="https://youtube.com/@alpha_tenet">Class 12</a></li>
-                    <li><a href="https://youtube.com/@alpha_tenet">Class 11</a></li>
-                    <li><a href="https://youtube.com/@alpha_tenet">Class 10</a></li>
-                    <li><a href="https://youtube.com/@alpha_tenet">Class 9</a></li>
-                    <li><a href="https://youtube.com/@alpha_tenet">Class 8</a></li>
-                    <li><a href="https://youtube.com/@alpha_tenet">Class 7</a></li>
-                    
-                    <li><a href="https://instagram.com/alpha_tenet">Class 6</a></li>
+                    <li><a href="https://youtube.com/@alpha_tenet">Youtube</a></li>
+                    <li><a href="https://instagram.com/alpha_tenet">Instagram</a></li>
                     <!-- <li><a href="#">Buy me a Coffee</a></li> -->
                     <li><a href="/cdn-cgi/l/email-protection#83e8f1eaf0ebf5eaf0ebf4e2e8e2f1eee2bbb0c3e4eee2eaefade0ecee">Contact Us</a></li>
                 </ul>
                 <div class="icons">
-                    <svg class="line" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g><circle class='line' cx='12' cy='12' r='6'></circle><circle cx='12' cy='3' r='1'></circle><circle cx='12' cy='21' r='1'></circle><circle cx='21' cy='12' r='1'></circle><circle cx='3' cy='12' r='1'></circle><circle cx='5.5' cy='5.5' r='1'></circle><circle cx='18.5' cy='18.5' r='1'></circle><circle cx='18.5' cy='5.5' r='1'></circle><circle cx='5.5' cy='18.5' r='1'></circle></g></svg>
+                    <svg id="toggle" class="line" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g><circle class='line' cx='12' cy='12' r='6'></circle><circle cx='12' cy='3' r='1'></circle><circle cx='12' cy='21' r='1'></circle><circle cx='21' cy='12' r='1'></circle><circle cx='3' cy='12' r='1'></circle><circle cx='5.5' cy='5.5' r='1'></circle><circle cx='18.5' cy='18.5' r='1'></circle><circle cx='18.5' cy='5.5' r='1'></circle><circle cx='5.5' cy='18.5' r='1'></circle></g></svg>
 
                 </div>
             </div>
@@ -320,8 +377,12 @@
     </div>
     <nav>
         <span>Padhlo Baccho</span>
-        <svg id="toggle" class="line" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g><circle class='line' cx='12' cy='12' r='6'></circle><circle cx='12' cy='3' r='1'></circle><circle cx='12' cy='21' r='1'></circle><circle cx='21' cy='12' r='1'></circle><circle cx='3' cy='12' r='1'></circle><circle cx='5.5' cy='5.5' r='1'></circle><circle cx='18.5' cy='18.5' r='1'></circle><circle cx='18.5' cy='5.5' r='1'></circle><circle cx='5.5' cy='18.5' r='1'></circle></g></svg>
-
+        <svg class="line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g transform="translate(2.000000, 2.000000)">
+                    <circle cx="9.76659044" cy="9.76659044" r="8.9885584"></circle>
+                    <line x1="16.0183067" y1="16.4851259" x2="19.5423342" y2="20.0000001"></line>
+                </g>
+            </svg>
         <!-- <svg class="line"
 					xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) translate(5.500000, 4.000000)"><line x1="6.7743" y1="15.7501" x2="6.7743" y2="0.7501"></line><path d="M12.7988,9.6998 C12.7988,9.6998 9.5378,15.7498 6.7758,15.7498 C4.0118,15.7498 0.7498,9.6998 0.7498,9.6998"></path></g></svg> 
   -->
@@ -332,9 +393,44 @@
             </svg>
     </nav>
     <main>
-        <div class="container">
-            <h1>Minimality</h1>
-            <input type="search" name="search" id="search" placeholder="What is your question?">
+                <div aria-label="breadcrumb">
+  <ul class="breadcrumb">
+    <li><a href="/">Science</a></li>
+    <li><a href="/products">Physics</a></li>
+    <li><a href="/products/electronics">Electrostatics</a></li>
+    <li class="active">Electric Potential Energy</li>
+  </ul>
+</div>
+<br><br>
+
+        <h1># Integration Formulas with Virgil Font</h1>
+
+        <!-- Formulas as HTML with CSS Styling -->
+        <div class="formula">
+            <span class="integral"></span>x<span class="power">n</span> dx = 
+            <span class="fraction">
+                <span class="numerator">x<span class="power">n+1</span></span>
+                <span class="denominator">n+1</span>
+            </span> + C, (n ≠ -1)
+        </div>
+
+        <div class="formula">
+            <span class="integral"></span>e<span class="power">x</span> dx = e<span class="power">x</span> + C
+        </div>
+
+        <div class="formula">
+            <span class="integral"></span><span class="fraction">
+                <span class="numerator">1</span>
+                <span class="denominator">x</span>
+            </span> dx = ln |x| + C
+        </div>
+
+        <div class="formula">
+            <span class="integral"></span>sin x dx = -cos x + C
+        </div>
+
+        <div class="formula">
+            <span class="integral"></span>cos x dx = sin x + C
         </div>
     </main>
     <script src="https://kit.fontawesome.com/3701a9a57e.js" crossorigin="anonymous"></script>
