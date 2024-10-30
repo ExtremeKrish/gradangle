@@ -15,8 +15,17 @@
     <!-- Google tag (gtag.js) -->
 
     <title>Edtech Startup</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-</head>
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+        onload="initKatex()">renderMathInElement(document.body);</script>
+
+    </head>
 
 <body class="dark-theme">
     <div class="drawer-container">
@@ -38,7 +47,7 @@
         </div>
     </div>
     <nav>
-        <span>Padhlo Baccho</span>
+        <span>Rontexcube</span>
         <svg id="toggle" class="line" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g><circle class='line' cx='12' cy='12' r='6'></circle><circle cx='12' cy='3' r='1'></circle><circle cx='12' cy='21' r='1'></circle><circle cx='21' cy='12' r='1'></circle><circle cx='3' cy='12' r='1'></circle><circle cx='5.5' cy='5.5' r='1'></circle><circle cx='18.5' cy='18.5' r='1'></circle><circle cx='18.5' cy='5.5' r='1'></circle><circle cx='5.5' cy='18.5' r='1'></circle></g></svg>
 
         <!-- <svg class="line"
@@ -61,39 +70,85 @@
         </div>
         <br><br>
 
-        <h1># Integration Formulas with Virgil Font</h1>
+        <div id="markdown-area">
+# Integral Formulas
 
-        <!-- Formulas as HTML with CSS Styling -->
-        <div class="formula">
-            <span class="integral"></span>x<span class="power">n</span> dx =
-            <span class="fraction">
-                <span class="numerator">x<span class="power">n+1</span></span>
-            <span class="denominator">n+1</span>
-            </span> + C, (n ≠ -1)
-        </div>
+### 1. Basic Integral Formula
+The integral of a function $f(x)$ over $x$ is represented as:
+$$
+\int f(x) \, dx
+$$
 
-        <div class="formula">
-            <span class="integral"></span>e<span class="power">x</span> dx = e<span class="power">x</span> + C
-        </div>
+### 2. Power Rule for Integration
+For any real number $n \neq -1$:
+$$
+\int x^n \, dx = \frac{x^{n+1}}{n+1} + C
+$$
 
-        <div class="formula">
-            <span class="integral"></span><span class="fraction">
-                <span class="numerator">1</span>
-            <span class="denominator">x</span>
-            </span> dx = ln |x| + C
-        </div>
+### 3. Integral of Exponential Functions
+The integral of the exponential function $e^x$ is:
+$$
+\int e^x \, dx = e^x + C
+$$
 
-        <div class="formula">
-            <span class="integral"></span>sin x dx = -cos x + C
-        </div>
+### 4. Integral of Trigonometric Functions
+#### Sine Function
+$$
+\int \sin(x) \, dx = -\cos(x) + C
+$$
 
-        <div class="formula">
-            <span class="integral"></span>cos x dx = sin x + C
-        </div>
+#### Cosine Function
+$$
+\int \cos(x) \, dx = \sin(x) + C
+$$
 
-        <div id="markdown-area"># Heading ## Heading 2
+#### Secant-Squared Function
+$$
+\int \sec^2(x) \, dx = \tan(x) + C
+$$
 
-        </div>
+#### Cosecant-Squared Function
+$$
+\int \csc^2(x) \, dx = -\cot(x) + C
+$$
+
+### 5. Integral of Rational Functions
+The integral of $\frac{1}{x}$:
+$$
+\int \frac{1}{x} \, dx = \ln |x| + C
+$$
+
+### 6. Definite Integral Example
+For example, the definite integral of $x^2$ from $0$ to $1$ is:
+$$
+\int_0^1 x^2 \, dx = \frac{1}{3}
+$$
+
+### 7. Fundamental Theorem of Calculus
+If $F(x)$ is the antiderivative of $f(x)$ on $[a, b]$, then:
+$$
+\int_a^b f(x) \, dx = F(b) - F(a)
+$$
+
+### 8. Double Integral
+The double integral of $f(x, y)$ over a region $R$ is written as:
+$$
+\iint_R f(x, y) \, dA
+$$
+
+### 9. Triple Integral
+For a function $f(x, y, z)$ over a volume $V$:
+$$
+\iiint_V f(x, y, z) \, dV
+$$
+
+### 10. Surface Integral
+The surface integral of a scalar field $\phi(x, y, z)$ over a surface $S$ is:
+$$
+\iint_S \phi(x, y, z) \, dS
+$$
+
+</div>
     </main>
     <script src="https://kit.fontawesome.com/3701a9a57e.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.js"></script>

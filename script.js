@@ -24,7 +24,18 @@ document.getElementById('toggle').addEventListener('click', function() {
     document.body.classList.toggle('dark-theme');
 });
 
-var converter = new showdown.Converter();
+
+
+function initKatex(){
+    var converter = new showdown.Converter();
 text = document.getElementById("markdown-area").innerHTML;
 html = converter.makeHtml(text);
 document.getElementById("markdown-area").innerHTML = html;
+
+renderMathInElement(document.getElementById("markdown-area"), {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},  // Block-level
+      {left: "$", right: "$", display: false}    // Inline
+    ]
+  });
+}

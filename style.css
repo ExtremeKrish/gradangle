@@ -211,7 +211,6 @@ body {
     font-family: Mabry Pro;
     background-color: var(--color-background);
     height: 100%;
-    transition: background-color 0.3s ease, color 0.3s ease;
     user-select: none;
     /* Standard */
     -webkit-user-select: none;
@@ -219,6 +218,7 @@ body {
     -moz-user-select: none;
     /* Firefox */
     -ms-user-select: none;
+    font-size: 18px;
 }
 
 button.primary {
@@ -292,6 +292,7 @@ main {
     display: flex;
     flex-direction: column;
     font-family: var(--font-secondary);
+    color: var(--color-foreground);
 }
 
 main.center {
@@ -509,8 +510,6 @@ div.icons {
     border-top: 1px solid #333;
     margin-top: -3px;
 }
-
-border-top: 1px solid #333;
-margin-top: -3px;
-
+.katex, .katex .mathnormal, .katex .mathrm, .katex .custom-Regular, .katex .amsrm {
+    font-family: var(--font-secondary);
 }
